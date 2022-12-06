@@ -1,0 +1,8 @@
+.idea
+node_modules
+public/uploads/*
+!public/uploads/.gitkeep
+!public/uploads/laptop.jpg
+!public/uploads/curved-monitors.jpg
+!public/uploads/projector.jpg
+!public/uploads/sony1.jpg
