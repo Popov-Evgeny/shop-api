@@ -9,11 +9,11 @@ const app = express();
 
 const port = 8000;
 
-app.use(cors({origin: 'http://localhost:3000' || 'https://popov-evgeny.github.io/shop-app/'}));
+app.use(cors({origin: 'http://localhost:3000'}));
 app.use(express.json());
 app.use(express.static('public'));
 app.use('/users', Users);
-app.use('/product', Products);
+app.use('/products', Products);
 app.use('/categories', Categories);
 
 const run = async () => {

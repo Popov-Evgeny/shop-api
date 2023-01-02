@@ -29,6 +29,11 @@ router.get('/', async (req, res, next) => {
     if (req.query.category) {
       query.category = req.query.category
     }
+
+    if (req.query.limit) {
+      const products = await Product.find().limit(req.query.limit).populate('user', 'name');
+      return res.send(products);
+    }
     const products = await Product.find(query).populate('user', 'name');
     return res.send(products);
   } catch (e) {
