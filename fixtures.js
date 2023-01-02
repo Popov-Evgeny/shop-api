@@ -27,14 +27,18 @@ const run = async () => {
     token: '5enDI2paOasdPavVWOnwB'
   });
 
-  const [projectors, laptops, headphones, monitors] = await Category.create({
-    title: 'Projectors',
+  const [watches, laptops, headphones, monitors] = await Category.create({
+    title: 'Watches',
+    image: 'watches.png',
   }, {
     title: 'Laptops',
+    image: 'laptop.png',
   }, {
     title: 'Headphones',
+    image: 'sony-audio.jpeg',
   }, {
     title: 'Monitors',
+    image: 'sms-monitor.jpeg',
   });
 
   await Product.create({
@@ -59,11 +63,11 @@ const run = async () => {
     image: 'sms-monitor.jpeg',
     user: user
   }, {
-    category: projectors,
-    title: 'Ultra-Low Input Lag HDR Console Gaming',
+    category: watches,
+    title: 'Ultra-Low watches',
     price: 1000,
     description: 'Built for the ultimate gaming experience, the TH685 is supercharged with low input lag(8.3ms) for real-time video game thrills. Stunning 1080p HDR graphics and 3500 ANSI Lumens of high brightness deliver intense action, even in daylight. The awe-inspiring sound immerses you in epic gameplay like nothing you’ve seen before.',
-    image: 'projector.jpeg',
+    image: 'watches.png',
     user: user2
   });
 
