@@ -10,7 +10,6 @@ router.post('/',  async (req, res, next) => {
       email: req.body.email,
       password: req.body.password,
       name: req.body.name,
-      phone: req.body.phone
     }
 
     const user = new User(userData);

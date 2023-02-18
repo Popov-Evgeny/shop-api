@@ -3,6 +3,7 @@ const config = require("./config");
 const Category = require("./models/Category");
 const Product = require("./models/Product");
 const User = require("./models/User");
+const {randomUUID} = require('crypto');
 
 const run = async () => {
   await mongoose.connect(config.mongo.db, config.mongo.options);
@@ -14,31 +15,29 @@ const run = async () => {
   }
 
   const [user, user2] = await User.create({
-    email: 'test@as.com',
+    email: 'test@john.com',
     password: '123',
     name: 'John Doe',
-    phone: '0222-222-222',
-    token: '5enDI2paOqusPavVWOnwB'
+    token: randomUUID()
   }, {
-    email: 'test@ad.com',
+    email: 'test@jack.com',
     password: '123',
     name: 'Jack Doe',
-    phone: '0555-555-555',
-    token: '5enDI2paOasdPavVWOnwB'
+    token: randomUUID()
   });
 
   const [watches, laptops, headphones, monitors] = await Category.create({
     title: 'Watches',
     image: 'watches.png',
-  }, {
+  },{
+    title: 'Headphones',
+    image: 'sony-audio.jpeg',
+  },{
     title: 'Laptops',
     image: 'laptop.png',
   }, {
-    title: 'Headphones',
-    image: 'sony-audio.jpeg',
-  }, {
     title: 'Monitors',
-    image: 'sms-monitor.jpeg',
+    image: 'monitors.png',
   });
 
   await Product.create({
@@ -46,7 +45,7 @@ const run = async () => {
     title: 'MSI GL66 Gaming Laptop',
     price: 1300,
     description: '15.6" 144Hz FHD 1080p Display, Intel Core i7-11800H, NVIDIA GeForce RTX 3070, 16GB, 512GB SSD, Win10, Black (11UGK-001)',
-    image: 'msi-laptop.jpeg',
+    image: 'laptop.png',
     user: user
   }, {
     category: headphones,
@@ -60,7 +59,7 @@ const run = async () => {
     title: 'Best Buy Samsung - T55 Series 27" LED 1000R Curved FHD FreeSync Monitor',
     price: 500,
     description: 'Shop Samsung T55 Series 27" LED 1000R Curved FHD FreeSync Monitor (DisplayPort, HDMI, VGA) at Best Buy. Find low everyday prices and buy online.',
-    image: 'sms-monitor.jpeg',
+    image: 'monitors.png',
     user: user
   }, {
     category: watches,
