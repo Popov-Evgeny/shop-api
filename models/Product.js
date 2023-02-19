@@ -19,7 +19,6 @@ const ProductSchema = new Schema({
   description: String,
   image: {
     type: String,
-    required: true
   },
   user: {
     type: Schema.Types.ObjectId,

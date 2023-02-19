@@ -60,9 +60,10 @@ router.post('/sessions', async (req, res) => {
 router.delete('/sessions', async (req, res, next) => {
   try {
     const token = req.get('Authorization');
+
     const message = {message: 'OK'};
 
-    if (!token) return res.send(message);
+    if (!token) return res.send({error: 'Please use token!'});
 
     const user = await User.findOne({token});
 

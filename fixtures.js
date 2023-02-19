@@ -68,6 +68,34 @@ const run = async () => {
     description: 'Built for the ultimate gaming experience, the TH685 is supercharged with low input lag(8.3ms) for real-time video game thrills. Stunning 1080p HDR graphics and 3500 ANSI Lumens of high brightness deliver intense action, even in daylight. The awe-inspiring sound immerses you in epic gameplay like nothing you’ve seen before.',
     image: 'watches.png',
     user: user2
+  },{
+    category: laptops,
+    title: 'Lenovo Gaming 3',
+    price: 1000,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus doloribus est maxime praesentium suscipit temporibus. Ducimus maxime modi nisi numquam obcaecati quos saepe totam? ',
+    image: null,
+    user: user
+  }, {
+    category: headphones,
+    title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    price: 120,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus doloribus est maxime praesentium suscipit temporibus. Ducimus maxime modi nisi numquam obcaecati quos saepe totam?',
+    image: null,
+    user: user2
+  }, {
+    category: monitors,
+    title: 'Best Buy Samsung - Monitor',
+    price: 350,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus doloribus est maxime praesentium suscipit temporibus. Ducimus maxime modi nisi numquam obcaecati quos saepe totam?',
+    image: null,
+    user: user
+  }, {
+    category: watches,
+    title: 'Ultra-Low watches',
+    price: 850,
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus doloribus est maxime praesentium suscipit temporibus. Ducimus maxime modi nisi numquam obcaecati quos saepe totam?',
+    image: null,
+    user: user2
   });
 
   await mongoose.connection.close();
